@@ -8,12 +8,18 @@ public class Person {
     private String gender;
     private String tel;
     //constructors
-    //getter and setter
-    //toString
-
 
     public Person() {
     }
+
+    public Person(String pid, String name, int age, String gender, String tel) {
+        this.pid = pid;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.tel = tel;
+    }
+    //getter and setter
 
     public String getPid() {
         return pid;
@@ -55,6 +61,8 @@ public class Person {
         this.tel = tel;
     }
 
+    //toString
+
     @Override
     public String toString() {
         return "Person{" +
@@ -66,13 +74,8 @@ public class Person {
                 '}';
     }
 
-    public Person(String pid, String name, int age, String gender, String tel) {
-        this.pid = pid;
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.tel = tel;
-
-
+    public void introduce(){
+        System.out.println("my name is +" + name);
+        System.out.println("I am "+age+" year ole.");
     }
 }
